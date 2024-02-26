@@ -22,7 +22,26 @@ int main (){
         }
     }
     else {
-        cout << "it's not a charecter" <<endl;
+        cout << "it's not a character" <<endl;
+    }
+    int num = input - '0';         // conver character to integer
+    bool isPrime = true;
+    if (num <= 1){
+        isPrime = false;
+    }
+    else{
+        for(int i = 2; i * i <= num; ++i){ // iterate up to num*num <= num
+            if(num % i == 0){
+                isPrime = false;
+                break;
+            }
+    }
+    }
+    if (isPrime && num > 1){
+        cout << "It's a Prime Number" << endl;
+    }
+    else {
+        cout << "It's not a Prime Number" << endl;
     }
     if (input > 0 && input % 2 == 0){
         cout << "It' Even";
