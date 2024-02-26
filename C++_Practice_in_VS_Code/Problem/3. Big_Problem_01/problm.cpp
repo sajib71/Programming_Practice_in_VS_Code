@@ -28,8 +28,13 @@ int main (){
         cout << "It' Even";
     }
     else {
-        cout << "It's Odd";
+        cout << "It's Odd" << endl;
     }
-    if (input - 1)
+    if (input >= 0){
+        cout << "It's a Positive Number";
+    }
+    else {
+        cout << "It's a Negative Number";
+    }
     return 0;
 }
